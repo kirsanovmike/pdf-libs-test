@@ -5,7 +5,6 @@
         <v-col cols="10">
           <v-row align="center" justify="center">
             <v-col cols="12" md="6" xl="8">
-              <h1 class="display-2 font-weight-bold mb-4">Crush Lover</h1>
               <h1 class="font-weight-light">
                 An application that helps you identify difficult moments in a
                 relationship. <br />
