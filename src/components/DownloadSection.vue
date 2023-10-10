@@ -10,7 +10,7 @@
             <v-col cols="12" sm="8" class="white--text text-left">
               <h1 class="font-weight-light display-2 mb-2">Baixar Demonstração</h1>
               <h1 class="font-weight-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ex
+                Lorem -ipsum dolor sit amet consectetur adipisicing elit. Iste ex
                 animi quod laboriosam vel blanditiis labore alias, aliquid,
                 tempora repellendus non.
               </h1>
