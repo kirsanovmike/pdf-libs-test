@@ -1,0 +1,68 @@
+<template>
+  <div id="viewport">
+    <div id="map">
+
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "PAN",
+  var map = document.getElementById('map');
+  var vp = document.getElementById('viewport');
+
+
+  map.onmousedown = startDrag;
+
+  function startDrag (e)
+{
+  var startX = e.clientX;
+  var startY = e.clientY;
+  var offsetX = this.offsetLeft;
+  var offsetY = this.offsetTop;
+
+  this.onmousemove = function (e2)
+  {
+    var newX = e2.clientX-startX;
+    var newY = e2.clientY-startY;
+    var calcX = offsetX + newX;
+    var calcY = offsetY + newY;
+
+
+    if (calcX < 0 && calcX > -400)
+      this.style.left = calcX + 'px';
+
+    if (calcY < 0 && calcY > -400)
+      this.style.top = calcY + 'px';
+  }
+
+  this.onmouseup = function ()
+  {
+    this.onmouseup = "";
+    this.onmousemove = "";
+  }
+}
+
+}
+</script>
+
+
+<style>
+#viewport{
+  width:400px;
+  height:400px;
+  border:1px solid #000;
+  overflow:hidden;
+  position:relative;
+}
+#map{
+  width:800px;
+  height:800px;
+  background-image:url(https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png);
+  cursor:move;
+  position:absolute;
+  left:0;
+  top:0;
+}
+</style>
